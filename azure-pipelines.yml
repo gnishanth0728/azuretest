@@ -11,9 +11,9 @@ steps:
   - task: Checkout@1
     displayName: 'Checkout code'
 
-  - script: |
-      echo "The source branch is: $(Agent.Id)"
-    displayName: 'Echo Source Branch'
+  # - script: |
+  #     echo "The source branch is: $(Agent.Id)"
+  #   displayName: 'Echo Source Branch'
 
   - script: |
       echo "Running some build task"
