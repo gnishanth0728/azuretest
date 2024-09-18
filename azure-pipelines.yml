@@ -6,9 +6,9 @@ pool:
   vmImage: 'ubuntu-latest' # You can change this to a different agent if needed (e.g., 'windows-latest')
 
 steps:
-  # - script: |
-  #     echo "The source branch is: $(Agent.Id)"
-  #   displayName: 'Echo Source Branch'
+  - script: |
+      echo "The source branch is: $(Agent.Id)"
+    displayName: 'Echo Source Branch'
 
   - script: |
       echo "Running some build task"
