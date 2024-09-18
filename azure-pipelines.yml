@@ -7,7 +7,10 @@ pool:
 
 steps:
   - script: |
-      echo "The source branch is: $(Agent.Id)"
+      echo "The source branch is: $(Build.Repository.Name)"
+      echo "The source branch is: $(Build.SourceBranch)"
+      echo "The source branch is: $(Build.Repository.Uri)"
+      echo "The source branch is: $(Build.Repository.LocalPath)"
     displayName: 'Echo Source Branch'
 
   - script: |
