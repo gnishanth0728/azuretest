@@ -12,7 +12,7 @@ steps:
     displayName: 'Checkout code'
 
   - script: |
-      echo "The source branch is: $(Build.Repository.LocalPath)"
+      echo "The source branch is: $(Agent.BuildDirectory)"
     displayName: 'Echo Source Branch'
 
   - script: |
