@@ -8,13 +8,13 @@ pool:
   vmImage: 'ubuntu-latest' # You can change this to a different agent if needed (e.g., 'windows-latest')
 
 steps:
-- task: Checkout@1
-  displayName: 'Checkout code'
+  - task: Checkout@1
+    displayName: 'Checkout code'
 
-- script: echo "The source branch is: $(Build.SourceBranch)"
-  displayName: 'Echo Source Branch'
+  - script: echo "The source branch is: $(Build.SourceBranch)"
+    displayName: 'Echo Source Branch'
 
-- script: |
-    echo "Running some build task"
-    # Add your build or test commands here
-  displayName: 'Build task'
+  - script: |
+      echo "Running some build task"
+      # Add your build or test commands here
+    displayName: 'Build task'
