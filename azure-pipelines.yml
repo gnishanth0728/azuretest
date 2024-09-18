@@ -11,7 +11,8 @@ steps:
   - task: Checkout@1
     displayName: 'Checkout code'
 
-  - script: echo "The source branch is: $(Build.SourceBranch)"
+  - script: |
+      echo "The source branch is: $(Build.SourceBranch)"
     displayName: 'Echo Source Branch'
 
   - script: |
