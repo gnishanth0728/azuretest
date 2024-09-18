@@ -1,16 +1,11 @@
 # .azure-pipelines.yml
 trigger:
-  branches:
-    include:
-      - main
+  - main
 
 pool:
   vmImage: 'ubuntu-latest' # You can change this to a different agent if needed (e.g., 'windows-latest')
 
 steps:
-  - task: Checkout@1
-    displayName: 'Checkout code'
-
   # - script: |
   #     echo "The source branch is: $(Agent.Id)"
   #   displayName: 'Echo Source Branch'
