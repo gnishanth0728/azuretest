@@ -8,6 +8,7 @@ pool:
 steps:
   - script: |
       echo "The source branch is: $(Build.Repository.Name)"
+      echo "https://artifactory-02.boschdevcloud.com/artifactory/api/conan/acp-conan-temp-local "
       echo "The source branch is: $(Build.SourceBranch)"
       echo "The source branch is: $(Build.Repository.Uri)"
       echo "The source branch is: $(Build.Repository.LocalPath)"
