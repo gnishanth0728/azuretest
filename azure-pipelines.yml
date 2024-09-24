@@ -18,3 +18,9 @@ steps:
       echo "Running some build task"
       # Add your build or test commands here
     displayName: 'Build task'
+
+  - script: |
+      echo "Before replacement: $(Build.Repository.LocalPath)/my/subdirectory"
+      result=$(echo "$(Build.Repository.LocalPath)/my/subdirectory" | sed "s|$(Build.Repository.LocalPath)/||g")
+      echo "After replacement: $result"
+    displayName: 'Sed string replacement in Azure Pipeline'   
